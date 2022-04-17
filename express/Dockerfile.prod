@@ -1,0 +1,9 @@
+FROM alpine
+
+RUN apk add nodejs
+RUN apk add yarn
+WORKDIR  /usr/src/app
+COPY ./app .
+
+ENTRYPOINT [ "yarn" ]
+CMD [ "start" ]
